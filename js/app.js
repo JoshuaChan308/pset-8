@@ -9,7 +9,6 @@ const winningConditions = [
   [2, 4, 6]
 ];
 
-
 let board;
 let turn;
 let win;
