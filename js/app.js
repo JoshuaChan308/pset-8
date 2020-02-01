@@ -12,8 +12,9 @@ const winningConditions = [
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 let board;
-let turn;
 let win;
+let turn;
+
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
