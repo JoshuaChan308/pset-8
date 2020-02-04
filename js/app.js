@@ -31,3 +31,7 @@ document.getElementById("switch").onclick = switch_turn;
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
   board = [
+    "", "", "",
+    "", "", "",
+    "", "", ""
+  ];
