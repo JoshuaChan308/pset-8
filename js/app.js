@@ -29,3 +29,5 @@ document.getElementById("reset-button").onclick = init;
 document.getElementById("switch").onclick = switch_turn;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
+function init() {
+  board = [
