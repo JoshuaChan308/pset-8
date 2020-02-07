@@ -12,10 +12,12 @@ const winningConditions = [
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 let board;
-let win;
 let turn;
-let x_wins = 0;
-let o_wins = 0;
+let win;
+let determine_first_player;
+let x_wins_count = 0;
+let o_wins_count = 0;
+
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -36,3 +38,6 @@ function init() {
     "", "", "",
     "", "", ""
   ];
+
+  
+  
