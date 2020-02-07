@@ -14,7 +14,8 @@ const winningConditions = [
 let board;
 let win;
 let turn;
-
+let x_wins;
+let o_wins;
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -26,7 +27,7 @@ window.onload = init;
 
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-document.getElementById("switch").onclick = switch_turn;
+
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
