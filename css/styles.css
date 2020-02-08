@@ -52,22 +52,6 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-#x_wins {
-  border: 1px solid rgba(0, 0, 0, 0.75);
-  font-size: 20px;
-  height: 50px;
-  line-height: 50px;
-  user-select: none;
-  width: 150px;
-}
-#o_wins {
-  border: 1px solid rgba(0, 0, 0, 0.75);
-  font-size: 20px;
-  height: 50px;
-  line-height: 50px;
-  user-select: none;
-  width: 150px;
-}
 #reset-button {
   background-color: white;
   border: 1px solid black;
@@ -99,4 +83,30 @@ h2 {
   line-height: 50px;
   user-select: none;
   width: 300px;
+}
+#reset-scoreboard {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 21px;
+  line-height: 55px;
+  margin: 0%;
+  text-align: center;
+  width: 456px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#reset-scoreboard:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+td {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  user-select: none;
+  width: 150px;
 }
