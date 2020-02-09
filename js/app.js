@@ -55,3 +55,65 @@ function init() {
 
   render();
 }
+
+function render() {
+  board.forEach(function(mark, index) {
+    squares[index].textContent = mark;
+  });
+  if (win === "X") {
+    x_wins = x_wins + 1
+  }
+  else if (win === "O") {
+    o_wins = o_wins + 1
+  }
+  else if (win === "T") {
+    ties = ties + 1
+  }
+  x_score.innerHTML = x_wins
+  o_score.innerHTML = o_wins
+  tie_score.innerHTML = ties
+  message.textContent =
+    win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
+}
+
+function takeTurn(e) {
+  if (!win) {
+    let index = squares.findIndex(function(square) {
+      return square === e.target;
+    });
+
+    if (board[index] === "") {
+      board[index] = turn;
+      turn = turn === "X" ? "O" : "X";
+      win = getWinner();
+
+      render();
+    }
+  }
+}
+
+function getWinner() {
+  let winner = null;
+
+  winningConditions.forEach(function(condition, index) {
+    if (
+      board[condition[0]] &&
+      board[condition[0]] === board[condition[1]] &&
+      board[condition[0]] === board[condition[2]]
+    ){
+        winner = board[condition[0]];
+    }
+  });
+
+  return winner ? winner : board.includes("") ? null : "T";
+}
+
+function resetScoreboard() {
+    x_wins = 0;
+    o_wins = 0;
+    ties = 0;
+
+    x_score.innerHTML = x_wins
+    o_score.innerHTML = o_wins
+    tie_score.innerHTML = ties
+}
