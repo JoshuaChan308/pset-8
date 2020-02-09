@@ -46,7 +46,7 @@ function init() {
     } else if (first_Player === "O" || first_Player === "o") {
       turn = "O";
     } else {
-      determine_first_player = 0;
+      determine_first_player = L;
     }
   } while (first_Player !== "X" && first_Player !== "x" && first_Player !== "O" && first_Player !== "o");
 
