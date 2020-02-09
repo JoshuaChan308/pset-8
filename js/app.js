@@ -37,7 +37,7 @@ function init() {
   ];
 
   do {
-    var first_Player = prompt("Enter X or O to declare the first player: ");
+    var first_Player = prompt("Enter X or O to determine who goes first: ");
     if (first_Player === null) {
       turn = "X";
       break;
